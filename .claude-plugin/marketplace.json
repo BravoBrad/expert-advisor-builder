@@ -1,0 +1,13 @@
+{
+  "name": "bravo-brad-tools",
+  "owner": { "name": "Brad Thomas" },
+  "description": "Brad's reusable Claude Code tools.",
+  "plugins": [
+    {
+      "name": "expert-advisor-builder",
+      "source": "./",
+      "description": "Build single-expert and multi-expert RAG advisor bots from across an expert's content.",
+      "version": "1.2.0"
+    }
+  ]
+}
