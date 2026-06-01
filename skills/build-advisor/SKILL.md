@@ -133,6 +133,33 @@ instructions → test with a citation question.
 
 ---
 
+## Limits, cost & size guardrails (no surprise pulls)
+There's no hard cap baked in — instead, **show the numbers and get approval before spending.**
+- **Default per-platform caps** (sensible starting points; adjust per expert, and tell the user
+  they can raise them anytime):
+  - YouTube: ~30–50 curated videos (long-form first) — not whole channels.
+  - X/Twitter: most recent ~1,000–2,000 tweets, or date-bounded (e.g. last 2 yrs) via `maxItems`/`start`.
+  - Podcasts: top ~20–30 episodes — NOT the full back catalog (AI transcription ~$0.40/ep adds up fast).
+  - Instagram / TikTok: ~last 100–200 posts. · LinkedIn: ~last 100–300 posts.
+  - Web/blog: crawl depth 1–2, cap ~100 pages.
+- **Pre-pull estimate (always).** Before calling any Actor, show the user: projected item count,
+  approximate Apify cost, and rough word count — then get explicit approval. Flag podcasts
+  specifically (transcription is the priciest line item).
+- **Project-size check.** Claude Projects have a knowledge capacity (you'll see a "% used" meter).
+  Keep the assembled corpus comfortably under it; if the estimate looks large, trim sources BEFORE
+  pulling. A tight corpus retrieves better than a bloated one — quality > quantity.
+
+## Adding sources later (incremental & duplicate-safe — reassure the user)
+This is **not one-shot** — an advisor can grow anytime, safely:
+- To add material, just re-run with the new sources. The skill **appends** to the existing corpus
+  files; it does not start over or re-pull what's already there.
+- **No duplicates, two ways:** (1) before pulling, read the existing corpus files and collect the
+  `source:` URLs/IDs already captured — skip anything already present (so you never re-pull or
+  re-pay for it); (2) after appending, run `python ./dedup.py <file> --apply`, which removes any
+  near-duplicate sections (e.g. the same talk that arrived via two platforms), keeping the fullest.
+- Then re-upload only the changed file to the Project. Tell the user explicitly: *"You can keep
+  adding experts' new content over time — it won't double up."*
+
 ## Principles (carry these throughout)
 - **Human-in-the-loop curation.** Propose, get approval, then pull. Quality of sources > quantity.
 - **Source-tag everything.** The `### header` + author/platform/source line is what makes the

@@ -110,6 +110,28 @@ Then walk the user through creating the Project and testing with a question wher
 
 ---
 
+## Limits, cost & size guardrails (no surprise pulls)
+No hard cap is baked in — **show the numbers and get approval before spending**, PER EXPERT:
+- **Default per-platform caps** (starting points; raise anytime): YouTube ~20–40 curated videos
+  *per expert*; X/Twitter ~1,000–2,000 recent or date-bounded; podcasts top ~15–25 episodes
+  (transcription ~$0.40/ep); Instagram/TikTok ~last 100–200; LinkedIn ~last 100–300; web crawl
+  depth 1–2, ~100 pages.
+- **Pre-pull estimate (always):** show projected items, approx Apify cost, and word count per
+  expert, and get approval before pulling. Watch total size — a panel of several experts adds up.
+- **Project-size check:** Claude Projects have a knowledge limit (a "% used" meter). With multiple
+  experts this fills faster — keep each expert's slice curated and tight; trim before pulling if the
+  estimate looks large. Balanced representation beats one expert drowning out the rest.
+
+## Adding experts or sources later (incremental & duplicate-safe — reassure the user)
+**Not one-shot** — you can add a new expert or more of an existing one's content anytime:
+- Re-run with the additions; the skill **appends** and never starts over or re-pulls existing material.
+- **No duplicates:** (1) before pulling, skip any `source:` URL/ID already in the corpus; (2) after
+  appending, run `python ./dedup.py <file> --apply` to drop near-duplicate sections — but remember
+  the panel rule: **dedup per-expert only**, so two experts making a similar point are preserved
+  (that's the agreement signal you want). Keep one file per expert to make this automatic.
+- Re-upload the changed file(s) to the Project. Tell the user: *"You can add experts or fresh
+  content over time — it stays attributed and won't double up."*
+
 ## Principles
 - **Attribute, never blend** — re-check this in the final instructions; it's the whole point.
 - **`author:` tag on every section** — the load-bearing piece for a panel.
