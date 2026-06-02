@@ -119,9 +119,9 @@ Then walk the user through creating the Project and testing with a question wher
 ## Limits, cost & size guardrails (no surprise pulls)
 No hard cap is baked in — **show the numbers and get approval before spending**, PER EXPERT:
 - **Default per-platform caps** (starting points; raise anytime): YouTube ~20–40 curated videos
-  *per expert*; X/Twitter ~1,000–2,000 recent or date-bounded; podcasts top ~15–25 episodes
-  (transcription ~$0.40/ep); Instagram/TikTok ~last 100–200; LinkedIn ~last 100–300; web crawl
-  depth 1–2, ~100 pages.
+  *per expert*; X/Twitter ~1,000–2,000 recent or date-bounded; podcasts **via YouTube** (~$0.005
+  each — never paid audio transcription); Instagram/TikTok ~last 100–200; LinkedIn ~last 100–300;
+  web crawl depth 1–2, ~100 pages.
 - **Pre-pull estimate (always):** show projected items, approx Apify cost, and word count per
   expert, and get approval before pulling. Watch total size — a panel of several experts adds up.
 - **Project-size check:** Claude Projects have a knowledge limit (a "% used" meter). With multiple

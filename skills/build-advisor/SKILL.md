@@ -37,7 +37,7 @@ Don't proceed with a pull until the Apify connector is live.
 Ask the user:
 - **Who is the expert?** (name)
 - **Where do they publish?** Offer to figure it out, but confirm with them. Map their channels:
-  YouTube channel, X/Twitter handle, podcast (own + guest appearances), blog/website, newsletter
+  YouTube channel, X/Twitter handle, podcasts (pulled via YouTube — most are posted there), blog/website, newsletter
   (is the user subscribed in their inbox?), books the user owns (PDF/Kindle), Instagram, TikTok, LinkedIn.
 - **What will they use the advisor for?** (shapes which topics to prioritize.)
 
@@ -146,12 +146,12 @@ There's no hard cap baked in — instead, **show the numbers and get approval be
   they can raise them anytime):
   - YouTube: ~30–50 curated videos (long-form first) — not whole channels.
   - X/Twitter: most recent ~1,000–2,000 tweets, or date-bounded (e.g. last 2 yrs) via `maxItems`/`start`.
-  - Podcasts: top ~20–30 episodes — NOT the full back catalog (AI transcription ~$0.40/ep adds up fast).
+  - Podcasts: pull via **YouTube** (~$0.005 each) — most episodes are posted there. NEVER pay
+    ~$0.40/ep to transcribe audio; treat a podcast as a YouTube search for the show/host.
   - Instagram / TikTok: ~last 100–200 posts. · LinkedIn: ~last 100–300 posts.
   - Web/blog: crawl depth 1–2, cap ~100 pages.
 - **Pre-pull estimate (always).** Before calling any Actor, show the user: projected item count,
-  approximate Apify cost, and rough word count — then get explicit approval. Flag podcasts
-  specifically (transcription is the priciest line item).
+  approximate Apify cost, and rough word count — then get explicit approval.
 - **Project-size check.** Claude Projects have a knowledge capacity (you'll see a "% used" meter).
   Keep the assembled corpus comfortably under it; if the estimate looks large, trim sources BEFORE
   pulling. A tight corpus retrieves better than a bloated one — quality > quantity.
