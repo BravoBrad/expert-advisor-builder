@@ -73,7 +73,14 @@ section header so retrieval can tell sources apart and cite them:
 <clean text — decode HTML entities, strip tracking/footers, verbatim otherwise>
 ```
 
-Keep the books as their original PDFs (Projects read PDFs natively). Put everything in one folder.
+Keep the books as their original PDFs (Projects read PDFs natively).
+
+**Create the folder for the user — they don't pre-make anything.** Make a clearly-named folder in
+the current working directory (e.g. `<expert>-advisor/`), write all corpus files + the book PDFs +
+`PROJECT_SETUP.md` into it, and then **tell the user the full path** so they can find it later for
+re-uploads and incremental updates. The user does NOT need to create files or "connect" anything
+first — you create the folder and everything in it. If it's unclear where Claude Code is running,
+suggest a sensible spot (e.g. `~/Documents/Advisors/`) before writing.
 
 ### Step 4.5 — Quality & dedup pass (run this before building the Project)
 Experts repeat themselves and re-post the same talk across platforms — redundancy eats the

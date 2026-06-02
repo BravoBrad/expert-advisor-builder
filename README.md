@@ -33,6 +33,10 @@ This repo is both the plugin **and** its marketplace. To install:
 
 Then just talk to it: *"build me a Naval advisor"* or *"build a finance panel with Ramsey, Kiyosaki, and Ben Felix."*
 
+> **You don't need to create any files or folders first.** The skill builds a clearly-named folder
+> for you (e.g. `naval-advisor/`) and tells you where it saved everything. Just open Claude Code in
+> a spot you can find later (e.g. a `Advisors` folder in Documents) before you start.
+
 **To share with a friend:** push this folder to a GitHub repo and send them the two commands above (with your repo name). The **method** travels; each person authenticates their *own* Apify and builds from their *own* sources — no scraped data is ever shared.
 
 ## What you get per build
@@ -40,6 +44,21 @@ Then just talk to it: *"build me a Naval advisor"* or *"build a finance panel wi
 - A **quality & dedup pass** (`dedup.py`): strips promo boilerplate, drops near-duplicate sections (same talk re-posted across platforms), and reports repeated passages — so the corpus stays high-signal, not redundant. Runs verbatim-safe (removes repetition, never summarizes away the expert's voice).
 - Original book PDFs (Claude Projects read them natively).
 - A `PROJECT_SETUP.md` with the exact files to upload + tailored Project instructions + starter test questions.
+
+## Updating an existing advisor (add more anytime — duplicate-safe)
+You don't rebuild from scratch. To add content to an advisor you already made:
+
+1. **Keep the folder the skill created.** The corpus files live there; as long as it exists, the skill *appends* to it.
+2. **Ask, naming what to add:**
+   - Specific items → *"add these to my Hormozi advisor: `<youtube url>`, `<youtube url>`, and these X posts: `<urls>`"*
+   - More broadly → *"pull Naval's tweets from the last 30 days and add them to his advisor"*
+3. **The skill does the rest:** reads the existing corpus, **skips anything already captured** (no re-pulling, no re-paying), pulls only the new items, appends them with source tags, and runs the dedup pass so nothing doubles up.
+4. **Swap the updated file into the Project** (the one manual step — a Claude Project doesn't watch your folder):
+   - Open the advisor's Project on claude.ai
+   - Delete the old version of the changed file (e.g. `hormozi_youtube.txt`)
+   - Upload the new version (only the file[s] that changed — usually quick)
+
+That's it — do it weekly, monthly, whenever. It stays clean and never duplicates.
 
 ## Notes
 - **Curation is human-in-the-loop:** it proposes sources for your approval before pulling, and never fabricates links.

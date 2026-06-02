@@ -59,6 +59,12 @@ tag — but the **`author:` tag is mandatory on every section**:
 
 This author tag is what lets the advisor attribute and contrast. Don't skip it.
 
+**Create the folder for the user — they don't pre-make anything.** Make a clearly-named folder in
+the current working directory (e.g. `<subject>-panel/`), write all per-expert corpus files +
+`PROJECT_SETUP.md` into it, and **tell the user the full path** for later re-uploads and updates.
+They don't need to create files or connect anything first. If unsure where Claude Code is running,
+suggest a spot (e.g. `~/Documents/Advisors/`) before writing.
+
 ### Step 4.5 — Quality & dedup pass (run before building the Project)
 Run the bundled script on each corpus file to cut redundancy that would eat the Project's
 knowledge limit and skew retrieval:
