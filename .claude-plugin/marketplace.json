@@ -7,7 +7,7 @@
       "name": "expert-advisor-builder",
       "source": "./",
       "description": "Build single-expert and multi-expert RAG advisor bots from across an expert's content.",
-      "version": "1.4.0"
+      "version": "1.5.0"
     }
   ]
 }
