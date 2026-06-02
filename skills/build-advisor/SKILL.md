@@ -131,6 +131,13 @@ Create a `PROJECT_SETUP.md` in the folder containing:
   a concrete next step**… For **deep personal-finance or tax questions**, flag that you're
   extrapolating…" — note how every bracket became real, expert-specific content. That's the bar.
 
+  **Keep it tight and consistent (~150–250 words).** Name the signature frameworks in ONE inline
+  list — do NOT give each framework its own defined bullet. The corpus already contains the detail;
+  the instructions only tell the bot *how to think and cite*, not re-teach the ideas back to it.
+  Every advisor's instructions must follow this same shape and length, so a Naval bot and a Hormozi
+  bot read like siblings, not wildly different documents. If your draft runs long, cut definitions
+  first.
+
 - 3–5 tailored starter questions that name the expert's real frameworks (at least one forcing a
   citation, to test sourcing).
 - A short "updating later" note (re-run the skill to add sources; re-upload the changed file).

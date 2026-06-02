@@ -108,6 +108,11 @@ Bake those real specifics into this scaffold (fill every bracket):
 *The point:* a reader should see WHO holds which view and WHERE they clash — generic "experts may
 differ" is a failure; "Ramsey says kill the debt, Kiyosaki says borrow against the asset" is the win.
 
+**Keep it tight and consistent (~200–300 words — a touch longer than a single-expert advisor, since
+it names several voices, but no more).** Name each expert's frameworks in a short inline list; do NOT
+give every framework its own defined bullet — the corpus has the detail. All advisors (single and
+panel) should read like siblings. If your draft runs long, cut definitions first.
+
 - Add 3–5 starter questions, including at least one aimed squarely at a known disagreement axis (to
   test that the panel attributes and contrasts rather than blends).
 - "Updating later" note.
